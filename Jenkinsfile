@@ -29,7 +29,7 @@ pipeline
             steps
             {
                git 'https://github.com/intelliqittrainings/FunctionalTesting.git'
-               sh 'java -jar /home/ubuntu/.jenkins/workspace/DeclarativePipeline1/testing.jar'
+               sh 'java -jar /var/lib/jenkins/workspace/DeclarativePipeline/webapp/target/webapp.war'
             }
         }
        
@@ -43,7 +43,7 @@ pipeline
         }
         failure
         {
-            mail bcc: '', body: 'Continuous Integration has failed', cc: '', from: '', replyTo: '', subject: 'CI Failed', to: 'selenium.saikrishna@gmail.com'
+            mail bcc: '', body: 'Continuous Integration has failed', cc: '', from: '', replyTo: '', subject: 'CI Failed', to: 'sonurachamalla12@gmail.com'
         }
        
     }
