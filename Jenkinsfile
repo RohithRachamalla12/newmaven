@@ -29,7 +29,7 @@ pipeline
             steps
             {
                git 'https://github.com/intelliqittrainings/FunctionalTesting.git'
-               sh 'java -jar /var/lib/jenkins/workspace/DeclarativePipeline/webapp/target/webapp.war'
+          
             }
         }
        
