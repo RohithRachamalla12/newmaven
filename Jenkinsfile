@@ -32,21 +32,14 @@ pipeline
           
             }
         }
-       
-    }
-    
-    post
-    {
-        success
+        stage('ContinuousDelivery')
         {
+            steps
+            {
                deploy adapters: [tomcat9(credentialsId: '9b87e639-2fa1-4606-b6bb-2733ffc25871', path: '', url: 'http://172.31.3.205:8080')], contextPath: 'prod', war: '**/*.war'
+            }
         }
        
     }
-    
-    
-    
-    
-    
     
 }
