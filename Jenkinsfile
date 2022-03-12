@@ -21,7 +21,7 @@ pipeline
         {
             steps
             {
-               deploy adapters: [tomcat9(credentialsId: '9f567119-2180-4a73-b91c-d8f2654a7a36', path: '', url: 'http://172.31.43.192:8080')], contextPath: 'testapp', war: '**/*.war'
+               deploy adapters: [tomcat9(credentialsId: '9f567119-2180-4a73-b91c-d8f2654a7a36', path: '', url: 'http://172.31.43.192:8080')], contextPath: 'test', war: '**/*.war'
             }
         }
         stage('ContinuousTesting')
@@ -36,7 +36,7 @@ pipeline
         {
             steps
             {
-               deploy adapters: [tomcat9(credentialsId: '9b87e639-2fa1-4606-b6bb-2733ffc25871', path: '', url: 'http://172.31.3.205:8080')], contextPath: 'prodapp', war: '**/*.war'
+               deploy adapters: [tomcat9(credentialsId: '9b87e639-2fa1-4606-b6bb-2733ffc25871', path: '', url: 'http://172.31.3.205:8080')], contextPath: 'prod', war: '**/*.war'
             }
         }
        
